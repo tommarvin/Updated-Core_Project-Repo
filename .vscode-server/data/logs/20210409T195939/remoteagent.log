@@ -1,0 +1,27 @@
+[2021-04-09 19:59:39.823] [remoteagent] [info] 
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+
+[2021-04-09 19:59:39.823] [remoteagent] [info] Extension host agent started.
+[2021-04-09 19:59:40.027] [remoteagent] [info] [127.0.0.1][3ed6909b][ManagementConnection] New connection established.
+[2021-04-09 19:59:40.034] [remoteagent] [info] [127.0.0.1][85d4a0f7][ExtensionHostConnection] New connection established.
+[2021-04-09 19:59:40.214] [remoteagent] [info] [127.0.0.1][85d4a0f7][ExtensionHostConnection] <1586> Launched Extension Host Process.
+[2021-04-09 20:03:34.267] [remoteagent] [info] [127.0.0.1][3ed6909b][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2021-04-09 20:03:35.287] [remoteagent] [info] [127.0.0.1][85d4a0f7][ExtensionHostConnection] <1586> Extension Host Process exited with code: 0, signal: null.
+[2021-04-09 20:03:35.288] [remoteagent] [info] Last EH closed, waiting before shutting down
+[2021-04-09 20:03:36.313] [remoteagent] [info] Got delay-shutdown request while in shutdown timeout, delaying
+[2021-04-09 20:03:36.313] [remoteagent] [info] Cancelling previous shutdown timeout
+[2021-04-09 20:03:36.440] [remoteagent] [info] [127.0.0.1][347185e4][ManagementConnection] New connection established.
+[2021-04-09 20:03:36.491] [remoteagent] [info] [127.0.0.1][1a9b4f3b][ExtensionHostConnection] New connection established.
+[2021-04-09 20:03:36.504] [remoteagent] [info] [127.0.0.1][1a9b4f3b][ExtensionHostConnection] <1809> Launched Extension Host Process.
+[2021-04-09 20:03:41.082] [remoteagent] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2021-04-09 20:07:52.566] [remoteagent] [info] [127.0.0.1][347185e4][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[2021-04-09 20:07:53.587] [remoteagent] [info] [127.0.0.1][1a9b4f3b][ExtensionHostConnection] <1809> Extension Host Process exited with code: 0, signal: null.
+[2021-04-09 20:07:53.587] [remoteagent] [info] Cancelling previous shutdown timeout
+[2021-04-09 20:07:53.587] [remoteagent] [info] Last EH closed, waiting before shutting down

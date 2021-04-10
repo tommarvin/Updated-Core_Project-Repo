@@ -1,0 +1,6 @@
+all:
+  hosts:
+    Manager:
+      users:
+      - username: jenkins
+      - username: Tom

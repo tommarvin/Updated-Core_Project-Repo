@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service 1</title>
+    <style>
+        body {
+            font-size: xx-large;
+            font-weight: 1000;
+            font-family: Castellar;
+            text-align: center;
+            background-color: darkcyan;
+        }
+
+        .content {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgb(114, 109, 109);
+            padding: 10px;
+            border: 3px solid rgb(194, 193, 193);
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .btn {
+            border: 3px solid rgb(194, 193, 193);
+            background-color: rgb(114, 109, 109);
+            color: black;
+            padding: 14px 28px;
+            font-family: arial-black;
+            font-weight: 1000;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .under-line {
+            font-family: Arial-Black;
+            text-decoration: underline rgb(47, 47, 48);
+        }
+
+        .arial-black {
+            font-family: Arial-Black;
+        }
+    </style>
+</head>
+
+
+
+
+
+<body bgcolor="DarkCyan">
+    <h1 class="content">
+        Welcome to Battle Simulator
+    </h1>
+
+    <br>
+
+    <div class="content">
+        <h2 class="under-line">
+            How To Play:
+        </h2>
+        <p class="arial-black">
+
+            1. First you must select you character and give the character a name
+            <br>
+            <br>
+            2. Next you will be given a randomly generated weapon to take with you into this round
+            <br>
+            <br>
+            3. In the third stage we will generate an opponenet who you will be battling against
+            <br>
+            <br>
+            4. Finally, you will see if your character has come out of the battle victorious or not.
+            <br>
+            <br>
+            5. You will now have the option to battle again or quit the application
+
+        </p>
+    </div>
+    <br>
+    <br>
+    <div>
+        <a href='/Step-1/{{Rnd}}'>
+            <button class="btn">
+                Continue
+            </button>
+        </a>
+    </div>
+
+
+
+</body>
+
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
+
+</html>

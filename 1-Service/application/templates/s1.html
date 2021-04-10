@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Character</title>
+    <style>
+        body {
+            font-size: xx-large;
+            font-weight: 700;
+            font-family: Castellar;
+            text-align: center;
+            background-color: darkcyan;
+        }
+
+        .content {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgb(114, 109, 109);
+            padding: 10px;
+            border: 3px solid rgb(194, 193, 193);
+        }
+
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .btn {
+            border: 3px solid black;
+            background-color: rgb(114, 109, 109);
+            color: black;
+            padding: 14px 28px;
+            font-family: arial-black;
+            font-weight: 1000;
+            font-size: 25px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .under-line {
+            font-family: Arial-Black;
+            text-decoration: underline rgb(47, 47, 48);
+        }
+
+        .arial-black {
+            font-family: Arial-Black;
+        }
+
+        .column {
+            float: left;
+            border: 5px solid darkcyan;
+            width: 32.1%;
+            padding: 5px;
+            height: 700px;
+        }
+        
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            align-items: center;
+        }
+
+        .content-2 {
+            border: 3px solid black;
+            background-color: rgb(114, 109, 109);
+            color: black;
+            padding: 14px 28px;
+            font-family: arial-black;
+            font-weight: 1000;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .table-style {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 class="content">
+        Select Your Character
+    </h1>
+
+    <div class="row">
+
+
+        <div class="column" style="background-color:rgb(194, 193, 193);">
+            <h2 class="under-line">Character 1</h2>
+            <div class="content-2">
+                <img src=https://www.nicepng.com/png/detail/161-1610692_dragon-ball-z-majin-buu-coloring-page-dragon.png
+                    alt="character 1" style="height:300px; width: 200px;">
+                <table class="table-style" border="5">
+                    <thead>
+                        <tr>
+                            <th>Health</th>
+                            <th>Strength</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for char in Characters.query.filter_by(id=1) %}
+                            <td>{{char.health}}</td>
+                            <td>{{char.strength}}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            {% for char in Characters.query.filter_by(id=1) %}
+            <form action='/Configure/{{Rnd}}/{{char.id}}' method='POST'>
+                <button class="btn" type="submit">
+                    Select Character
+                </button>
+            </form>
+            {% endfor %}
+
+        </div>
+
+
+        <div class="column" style="background-color:rgb(194, 193, 193);">
+            <h2 class="under-line">Character 2</h2>
+            <div class="content-2">
+                <img src=https://www.thecolor.com/images/The-Minotaur.gif alt="character 1"
+                    style="height:300px; width: 200px;">
+                <table class="table-style" border="5">
+                    <thead>
+                        <tr>
+                            <th>Health</th>
+                            <th>Strength</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for char in Characters.query.filter_by(id=2) %}
+                            <td>{{char.health}}</td>
+                            <td>{{char.strength}}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            {% for char in Characters.query.filter_by(id=2) %}
+            <form action='/Configure/{{Rnd}}/{{char.id}}' method='POST'>
+                <button class="btn" type="submit">
+                    Select Character
+                </button>
+            </form>
+            {% endfor %}
+        </div>
+
+
+        <div class="column" style="background-color:rgb(194, 193, 193);">
+            <h2 class="under-line">Character 3</h2>
+            <div class="content-2">
+                <img src=https://dibujos-animados.org/wp-content/gallery/imagenes-para-colorear-de-los-caballeros-del-zodiaco/imagenes-para-colorear-de-los-caballeros-del-zodiaco4.gif
+                    alt="character 1" style="height:300px; width: 200px;">
+                <table class="table-style" border="5">
+                    <thead>
+                        <tr>
+                            <th>Health</th>
+                            <th>Strength</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for char in Characters.query.filter_by(id=3) %}
+                            <td>{{char.health}}</td>
+                            <td>{{char.strength}}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            {% for char in Characters.query.filter_by(id=3) %}
+            <form action='/Configure/{{Rnd}}/{{char.id}}' method='POST'>
+                <button class="btn" type="submit">
+                    Select Character
+                </button>
+            </form>
+            {% endfor %}
+        </div>
+
+
+    </div>
+</body>
+
+</html>

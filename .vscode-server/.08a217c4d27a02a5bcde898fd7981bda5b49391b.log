@@ -1,0 +1,39 @@
+
+
+*
+* Visual Studio Code Server
+*
+* Reminder: You may only use this software with Visual Studio family products,
+* as described in the license https://aka.ms/vscode-remote/license
+*
+
+Extension host agent listening on 37047
+
+[20:11:15] Extension host agent started.
+[20:11:15] [127.0.0.1][4b61930a][ManagementConnection] New connection established.
+[20:11:15] [127.0.0.1][77c7366c][ExtensionHostConnection] New connection established.
+bash: cannot set terminal process group (-1): Inappropriate ioctl for device
+bash: no job control in this shell
+[IPC Library: Pty Host]  INFO Listing 0 persistent terminals, 0 total terminals
+[20:11:16] [127.0.0.1][77c7366c][ExtensionHostConnection] <1233> Launched Extension Host Process.
+[20:11:23] [127.0.0.1][4b61930a][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[20:11:24] [127.0.0.1][77c7366c][ExtensionHostConnection] <1233> Extension Host Process exited with code: 0, signal: null.
+Last EH closed, waiting before shutting down
+[20:11:24] Last EH closed, waiting before shutting down
+Got delay-shutdown request while in shutdown timeout, delaying
+[20:11:25] Got delay-shutdown request while in shutdown timeout, delaying
+Cancelling previous shutdown timeout
+[20:11:25] Cancelling previous shutdown timeout
+[20:11:25] [127.0.0.1][253517d0][ManagementConnection] New connection established.
+[IPC Library: Pty Host]  INFO Listing 0 persistent terminals, 0 total terminals
+[20:11:26] [127.0.0.1][cea7699b][ExtensionHostConnection] New connection established.
+[20:11:26] [127.0.0.1][cea7699b][ExtensionHostConnection] <1395> Launched Extension Host Process.
+[20:11:29] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[20:14:21] [127.0.0.1][253517d0][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+[20:14:22] [127.0.0.1][cea7699b][ExtensionHostConnection] <1395> Extension Host Process exited with code: 0, signal: null.
+Cancelling previous shutdown timeout
+[20:14:22] Cancelling previous shutdown timeout
+Last EH closed, waiting before shutting down
+[20:14:22] Last EH closed, waiting before shutting down
+Last EH closed, shutting down
+[20:19:22] Last EH closed, shutting down

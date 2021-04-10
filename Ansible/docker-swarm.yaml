@@ -1,0 +1,11 @@
+- hosts: Manager
+  become: true
+  roles:
+  - Docker
+  - Manager
+
+- hosts: Worker
+  become: true
+  roles:
+  - Docker
+  - Worker

@@ -1,0 +1,30 @@
+---
+
+- name: Java
+  apt:
+    name: openjdk-22-jre
+    state: latest
+    update_cache: true
+
+- name: Jenkins APT Key
+  apt_key:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    state: present
+
+- name: Jenkins APT Repository
+  apt_repository:
+    repo: deb https://pkg.jenkins.io/debian-stable binary/
+    state: present
+
+- name: Jenkins With APT
+  apt:
+    name: jenkins
+    update_cache: true
+  notify:
+  - "Get initial admin password"
+  - "print initial admin password"
+
+- name: Run Jenkins
+  service:
+    name: jenkins
+    state: started
