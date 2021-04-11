@@ -8,7 +8,7 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "docker-compose build && docker login && docker-compose push"
+                sh "docker-compose build && docker-compose push"
             }
         }
 
