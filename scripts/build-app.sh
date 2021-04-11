@@ -3,3 +3,5 @@ docker-compose down --rmi all
 
 # builds the images
 docker-compose build
+
+docker-compose push
