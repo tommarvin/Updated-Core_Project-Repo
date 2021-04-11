@@ -43,7 +43,7 @@
 - name: Add User
   become: true
   user:
-    name: pc
+    name: jenkins
     groups: docker
     append: yes
 
