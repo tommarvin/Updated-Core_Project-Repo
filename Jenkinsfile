@@ -5,20 +5,28 @@ pipeline{
             rollback = 'false'
         }
         stages{
-            stage('Build Image'){
+            stage('Test'){
                 steps{
-                    script{
-                        if (env.rollback == 'false'){
-                            sh "docker-compose build"
-                        }
-                    }
+                    sh "bash scripts/testing.sh"
+                }
+            }
+
+            stage('Build'){
+                steps{
+                    sh "bash scripts/build-app.sh"
+                }
+            }
+
+            stage('Configuration'){
+                steps{
+                    sh "cd Ansible && ansible-playbook -i inventory.yaml playbook.yaml"
                 }
             }
             
-        stage('Deploy App'){
-            steps{
-                sh "docker-compose pull && docker-compose up -d"
+            stage('Deploy'){
+                steps{
+                    sh "bash scripts/deploy-app.sh"
+                }
             }
-        }
     }
 }

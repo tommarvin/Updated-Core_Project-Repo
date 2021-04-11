@@ -1,13 +1,10 @@
-- hosts: all
+- hosts: managers
   roles:
-  - Docker
+  - docker
+  - manager
+  - nginx
 
-- hosts: Manager
-  become: true
+- hosts: workers
   roles:
-  - Manager
-
-- hosts: Workers
-    become: true
-    roles:
-    - Worker
+  - docker
+  - worker

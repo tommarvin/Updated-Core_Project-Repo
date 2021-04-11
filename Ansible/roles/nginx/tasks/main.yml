@@ -1,0 +1,22 @@
+---
+# tasks file for nginx
+- name: Install Nginx
+  become: true
+  apt:
+    pkg:
+    - nginx
+    state: latest
+    update_cache: true
+
+- name: Confirm Nginx Has Started
+  become: true
+  service:
+    name: nginx
+    state: started
+
+- name: Configure Nginx As Load Balancer
+  become: true
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify: 'reload nginx'

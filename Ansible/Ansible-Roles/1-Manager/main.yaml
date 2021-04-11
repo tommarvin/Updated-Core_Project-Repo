@@ -1,5 +1,0 @@
-- name: Docker Swarm
-  docker_swarm:
-    state: present
-
-- name: Docker Swarm Information
