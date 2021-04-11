@@ -22,7 +22,7 @@ pipeline{
         
         stage('Deploy'){
             steps{
-                sh "bash deploy-app.sh"
+                sh './scripts/deploy-app.sh'
             }
         }
     }
