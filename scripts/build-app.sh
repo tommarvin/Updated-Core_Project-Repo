@@ -5,7 +5,7 @@ docker-compose down --rmi all
 docker-compose build
 
 # login to docker
-sudo docker login
+docker login
 
 # Pushes the images
-sudo docker-compose push
+docker-compose push
