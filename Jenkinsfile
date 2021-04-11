@@ -8,7 +8,7 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "bash scripts/build-app.sh"
+                sh "docker-compose build && docker login && docker-compose push"
             }
         }
 
