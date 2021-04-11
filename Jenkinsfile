@@ -30,7 +30,7 @@ pipeline{
         
         stage('Deploy'){
             steps{
-                sh './scripts/deploy-app.sh'
+                sh "docker stack deploy --compose-file docker-compose.yaml"
             }
         }
     }
