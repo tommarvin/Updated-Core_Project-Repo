@@ -9,8 +9,7 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "docker-compose down --rmi all && docker-compose build"
-                sh "docker-compose up -d"
+                sh "docker-compose up --build"
             }
         }
 
@@ -25,13 +24,13 @@ pipeline{
         stage('Config'){
             steps{                          
 
-                sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml "
+                sh "~/ansible-playbook -i inventory.yaml playbook.yaml "
             }
         }
         
         stage('Deploy'){
             steps{
-                sh "docker stack deploy --compose file docker-compose.yaml"
+                sh "docker stack deploy --compose file docker-compose.yaml 1-service"
             }
         }
     }
