@@ -14,7 +14,8 @@ pipeline{
 
         stage('Configuration'){
             steps{
-                sh "/home/pc/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml"
+                sh "ansible-galaxy collection install community.docker"
+                sh "cd Ansible && ansible-playbook -i inventory.yaml playbook.yaml"
             }
         }
         
