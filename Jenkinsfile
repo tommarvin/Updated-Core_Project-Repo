@@ -4,7 +4,7 @@ pipeline{
         app_version = 'v1'
         rollback = 'false'
     }
-    
+
     stages{
 
         stage('Build'){
@@ -15,9 +15,7 @@ pipeline{
 
         stage('Configuration'){
             steps{
-                dir("Project-Folder/Ansible"){
                 sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml"
-                }
             }
         }
         
