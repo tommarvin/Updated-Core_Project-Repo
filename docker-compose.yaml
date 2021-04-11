@@ -6,34 +6,38 @@ services:
       container_name: 1-service
       build: ./1-Service
       image: 2033109/1-service
+      deploy:
+        replicas: 3
       ports:
       - target: 5500
         published: 5500
-        protocol: tcp
 
     2-Service:
       container_name: 2-service
       build: ./2-Service
       image: 2033109/2-service
+      deploy:
+        replicas: 3
       ports:
       - target: 5501
         published: 5501
-        protocol: tcp
 
     3-Service:
       container_name: 3-service
       build: ./3-Service
       image: 2033109/3-service
+      deploy:
+        replicas: 3
       ports:
       - target: 5502
         published: 5502
-        protocol: tcp
 
     4-Service:
       container_name: 4-service
       build: ./4-Service
       image: 2033109/4-service
+      deploy:
+        replicas: 3
       ports:
       - target: 5503
         published: 5503
-        protocol: tcp
