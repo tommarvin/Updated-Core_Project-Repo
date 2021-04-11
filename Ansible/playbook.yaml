@@ -2,9 +2,12 @@
   roles:
   - docker
   - manager
-  - nginx
 
 - hosts: workers
   roles:
   - docker
   - worker
+
+- hosts: nginx
+  roles:
+  - nginx

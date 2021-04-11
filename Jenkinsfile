@@ -4,29 +4,22 @@ pipeline{
             app_version = 'v1'
             rollback = 'false'
         }
-        stages{
-            stage('Test'){
-                steps{
-                    sh "bash scripts/testing.sh"
-                }
-            }
 
-            stage('Build'){
-                steps{
-                    sh "bash scripts/build-app.sh"
-                }
+        stage('Build'){
+            steps{
+                sh "bash scripts/build-app.sh"
             }
+        }
 
-            stage('Configuration'){
-                steps{
-                    sh "cd Ansible && ansible-playbook -i inventory.yaml playbook.yaml"
-                }
+        stage('Configuration'){
+            steps{
+                sh "cd Ansible && ansible-playbook -i inventory.yaml playbook.yaml"
             }
-            
-            stage('Deploy'){
-                steps{
-                    sh "bash scripts/deploy-app.sh"
-                }
+        }
+        
+        stage('Deploy'){
+            steps{
+                sh "bash scripts/deploy-app.sh"
             }
-    }
+        }
 }
