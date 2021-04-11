@@ -24,7 +24,7 @@ pipeline{
         stage('Config'){
             steps{                          
 
-                sh "/home/pc/Project-Folder/Ansible/ansible-playbook -i inventory.yaml playbook.yaml "
+                sh "ansible-playbook -i inventory.yaml playbook.yaml "
             }
         }
         
