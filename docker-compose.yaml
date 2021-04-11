@@ -37,14 +37,3 @@ services:
       - target: 5503
         published: 5503
         protocol: tcp
-
-    nginx:
-      image: nginx:latest
-      ports:
-      - target: 80
-        published: 80
-        protocol: tcp
-      volumes:
-      - type: bind
-        source: ./nginx/nginx.config
-        target: /etc/nginx/nginx.config
