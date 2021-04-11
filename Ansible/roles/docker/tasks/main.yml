@@ -43,10 +43,9 @@
 - name: Add User
   become: true
   user:
-    name: "{{ item.username }}"
+    name: pc
     groups: docker
     append: yes
-  with_items: "{{ docker_users }}"
 
 - name: Install Docker SDK
   become: true
