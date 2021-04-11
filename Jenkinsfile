@@ -1,9 +1,10 @@
 pipeline{
-        agent any
-        environment {
-            app_version = 'v1'
-            rollback = 'false'
-        }
+    agent any
+    environment {
+        app_version = 'v1'
+        rollback = 'false'
+    }
+    stages{
 
         stage('Build'){
             steps{
@@ -22,4 +23,5 @@ pipeline{
                 sh "bash scripts/deploy-app.sh"
             }
         }
+    }
 }
