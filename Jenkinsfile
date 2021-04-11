@@ -8,7 +8,7 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "docker-compose down --rmi all && docker-compose build && sudo docker-compose push"
+                sh "bash scripts/build-app.sh"
             }
         }
 
