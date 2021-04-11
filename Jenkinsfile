@@ -9,14 +9,14 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "bash scripts/build-app.sh"
+                sh "docker-compose down --rmi all && docker-compose build"
             }
         }
 
-        stage('Configuration'){
+        stage('Push'){
             steps{
-                sh 'ansible-galaxy collection install community.docker'
-                sh 'cd Ansible && ansible-playbook -i inventory.yaml playbook.yaml' 
+                sh "docker ps && docker images"
+                sh "docker-compose push"
             }
         }
         
