@@ -5,7 +5,7 @@ services:
     1-Service:
       container_name: 1-service
       build: ./1-Service
-      image: 2033109/1-service
+      image: 2033109/1-service:latest
       deploy:
         replicas: 3
       ports:
@@ -15,7 +15,7 @@ services:
     2-Service:
       container_name: 2-service
       build: ./2-Service
-      image: 2033109/2-service
+      image: 2033109/2-service:latest
       deploy:
         replicas: 3
       ports:
@@ -25,7 +25,7 @@ services:
     3-Service:
       container_name: 3-service
       build: ./3-Service
-      image: 2033109/3-service
+      image: 2033109/3-service:latest
       deploy:
         replicas: 3
       ports:
@@ -35,7 +35,7 @@ services:
     4-Service:
       container_name: 4-service
       build: ./4-Service
-      image: 2033109/4-service
+      image: 2033109/4-service:latest
       deploy:
         replicas: 3
       ports:
