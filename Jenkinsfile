@@ -24,7 +24,7 @@ pipeline{
         stage('Config'){
             steps{                          
 
-                sh "ansible-playbook -i inventory.yaml playbook.yaml "
+                sh "ansiblePlaybook become: true, credentialsId: '18713c3f-91c1-4111-b0ba-d148751741d6', installation: 'ansible', inventory: '/home/pc/Project-Folder/Ansible/inventory.yaml', playbook: '/home/pc/Project-Folder/Ansible/playbook.yaml' "
             }
         }
         
