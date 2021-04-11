@@ -15,7 +15,7 @@ pipeline{
 
         stage('Configuration'){
             steps{
-                sh "/home/jenkins/.local/bin/ansible-playbook -i inventory.yaml playbook.yaml"
+                sh "Ansible/ansible-playbook -i inventory.yaml playbook.yaml"
             }
         }
         
