@@ -22,7 +22,8 @@ pipeline{
 
         stage('Config'){
             steps{
-                ansiblePlaybook credentialsId: 'f72ec555-5ef4-44d5-8035-7e6c4e73e66a', disableHostKeyChecking: true, installation: 'ansible', inventory: 'Ansible/playbook.yaml', playbook: 'Ansible/inventory.yaml'            }
+                ansiblePlaybook credentialsId: 'f72ec555-5ef4-44d5-8035-7e6c4e73e66a', disableHostKeyChecking: true, installation: 'ansible', inventory: 'Ansible/playbook.yaml', playbook: 'Ansible/inventory.yaml'
+            }        
         }
 
 
