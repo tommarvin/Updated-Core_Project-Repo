@@ -9,6 +9,7 @@ pipeline{
 
         stage('Build'){
             steps{
+                sh "docker-compose down --rmi all"
                 sh "docker-compose build"
             }
         }
