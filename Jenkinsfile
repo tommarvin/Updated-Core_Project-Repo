@@ -9,7 +9,6 @@ pipeline{
 
         stage('Build'){
             steps{
-                sh "docker-compose down --rmi all"
                 sh "docker-compose build"
             }
         }
@@ -24,7 +23,7 @@ pipeline{
         
         stage('Deploy'){
             steps{
-                sh "docker-compose up -d --build "
+                sh "bash deploy-app.sh"
             }
         }
     }
