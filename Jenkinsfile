@@ -22,7 +22,7 @@ pipeline{
 
         stage('Config'){
             steps{
-                ansiblePlaybook disableHostKeyChecking: true, inventory: '/home/pc/Project-Folder/Ansible/inventory.yaml', playbook: '/home/pc/Project-Folder/Ansible/play-book.yaml'            
+                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'Ansible/inventory.yaml', playbook: 'Ansible/playbook.yaml'            
             }        
         }
 
