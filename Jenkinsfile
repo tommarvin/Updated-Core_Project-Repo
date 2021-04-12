@@ -27,7 +27,6 @@ pipeline{
         }
 
 
-        
         stage('Deploy'){
             steps{
                 sh "bash deploy-app.sh"
