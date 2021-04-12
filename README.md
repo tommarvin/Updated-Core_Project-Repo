@@ -1,20 +1,6 @@
 My Core Practical Project
 
 
-
-TABLE OF CONTENTS
-1	Planning	2
-1.1	My Idea	2
-1.2	Trello Board	7
-1.3	User Stories	8
-1.4	Front-End Design	9
-1.5	Risk Assessment	10
-1.6	Database	11
-2	My Project Documentation	12
-2.1	Jenkins	12
-2.2	Ansible	13
-2.3	Review of the project	14
-
 ![image](https://user-images.githubusercontent.com/80106830/114362924-c4c74180-9b6f-11eb-9171-3d6cea48d0b8.png)
 
 
